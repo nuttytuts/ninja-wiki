@@ -1,1 +1,1 @@
-* [Build Patterns](Build-Patterns)
+* [Build Patterns](wiki/Build-Patterns)
