@@ -1,1 +1,1 @@
-Welcome to the ninja wiki!
+* [Build Patterns](Build Patterns)
