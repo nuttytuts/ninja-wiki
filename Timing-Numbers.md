@@ -18,7 +18,7 @@ path->node hash load 0.94 (46017 entries / 49157 buckets)
   0.57s user 0.15s system 98% cpu 0.728 total
 ```
 
-### Target: Chrome -- OS: Mac -- Ninja: v1 -- Hardware: MacPro4,1, HDD, OS X 10.6.8
+### Target: Chrome -- OS: Mac OS X 10.6.8 -- Ninja: v1 -- Hardware: MacPro4,1, HDD
 ```
 $ ninja -C out/Release/ chrome -d stats
 ninja: Entering directory `out/Release/'
@@ -33,4 +33,23 @@ node stat        	39611 	4.6     	183.3
 depfile load     	9784  	90.7    	887.8
 
 path->node hash load 0.50 (49370 entries / 98317 buckets)
+Empty build takes 1.33s warm-cache, 58s cold-cache
+```
+
+### Target: Chrome -- OS: Mac OS X 10.8.2 -- Ninja: v1 -- Hardware: Retina MBP, SSD
+```
+ninja -C out/Release/ chrome -d stats
+ninja: Entering directory `out/Release/'
+ninja: no work to do.
+metric           	count 	avg (us) 	total (ms)
+.ninja parse     	685   	550.7   	377.2
+canonicalize str 	117383	0.2     	19.4
+canonicalize path	1161235	0.1     	97.4
+lookup node      	1161235	0.1     	130.1
+.ninja_log load  	1     	15513.0 	15.5
+node stat        	39611 	2.7     	107.6
+depfile load     	9783  	53.3    	521.5
+
+path->node hash load 0.50 (49367 entries / 98317 buckets)
+Empty build takes 0.77s warm-cache, 8s cold-cache
 ```
