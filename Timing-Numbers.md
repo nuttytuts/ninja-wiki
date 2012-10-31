@@ -1,5 +1,7 @@
 Here's a scratchpad to note timing numbers of various builds, so that we can keep the relative magnitudes in mind.
 
+## Linux
+
 ### Target: Chrome -- OS: Linux -- Ninja: v1 -- Hardware: beastly Googler machine
 ```
 %n -d stats chrome
@@ -17,6 +19,8 @@ depfile load     	8993  	48.4    	435.7
 path->node hash load 0.94 (46017 entries / 49157 buckets)
   0.57s user 0.15s system 98% cpu 0.728 total
 ```
+
+## Mac
 
 ### Target: Chrome -- OS: Mac OS X 10.6.8 -- Ninja: v1 -- Hardware: MacPro4,1, HDD
 ```
@@ -54,6 +58,8 @@ path->node hash load 0.50 (49367 entries / 98317 buckets)
 Empty build takes 0.77s warm-cache, 8s cold-cache
 ```
 
+## Windows
+
 ### Target: Chrome's base_unittests -- OS: Windows 7 -- Ninja: v1 93e5094 -- Hardware: fast CPU, slow disk, cold cache
 ```
 C:\Users\evmar\chrome\src>ninja -C out\Debug -d stats base_unittests
@@ -86,4 +92,35 @@ node stat               1879    110.1           206.9
 depfile load            635     78.3            49.7
 
 path->node hash load 0.15 (39437 entries / 262144 buckets)
+```
+
+### Same, `chrome` target
+```
+C:\Users\evmar\chrome\src>ninja -C out\Debug -d stats chrome
+ninja: Entering directory `out\Debug'
+ninja: no work to do.
+metric                  count   avg (us)        total (ms)
+.ninja parse            843     641.1           540.4
+canonicalize str        138729  0.0             0.1
+canonicalize path       3058444 0.0             1.6
+lookup node             3058444 0.0             13.7
+.ninja_log load         1       21766.0         21.8
+node stat               39061   685.9           26792.4
+depfile load            9524    13010.2         123909.2
+
+path->node hash load 0.19 (50685 entries / 262144 buckets)
+
+C:\Users\evmar\chrome\src>ninja -C out\Debug -d stats chrome
+ninja: Entering directory `out\Debug'
+ninja: no work to do.
+metric                  count   avg (us)        total (ms)
+.ninja parse            843     662.4           558.4
+canonicalize str        138729  0.0             0.0
+canonicalize path       3058444 0.0             0.4
+lookup node             3058444 0.0             0.7
+.ninja_log load         1       21500.0         21.5
+node stat               39061   150.1           5864.5
+depfile load            9524    190.7           1816.3
+
+path->node hash load 0.19 (50685 entries / 262144 buckets)
 ```
