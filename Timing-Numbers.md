@@ -53,3 +53,37 @@ depfile load     	9783  	53.3    	521.5
 path->node hash load 0.50 (49367 entries / 98317 buckets)
 Empty build takes 0.77s warm-cache, 8s cold-cache
 ```
+
+### Target: Chrome's base_unittests -- OS: Windows 7 -- Ninja: v1 93e5094 -- Hardware: fast CPU, slow disk, cold cache
+```
+C:\Users\evmar\chrome\src>ninja -C out\Debug -d stats base_unittests
+ninja: Entering directory `out\Debug'
+ninja: no work to do.
+metric                  count   avg (us)        total (ms)
+.ninja parse            843     4975.8          4194.6
+canonicalize str        138729  0.0             0.5
+canonicalize path       187273  0.0             0.1
+lookup node             187273  0.0             1.3
+.ninja_log load         1       37763.0         37.8
+node stat               1879    543.0           1020.3
+depfile load            635     6834.0          4339.6
+
+path->node hash load 0.15 (39437 entries / 262144 buckets)
+```
+
+### Same, with hot cache
+```
+C:\Users\evmar\chrome\src>ninja -C out\Debug -d stats base_unittests
+ninja: Entering directory `out\Debug'
+ninja: no work to do.
+metric                  count   avg (us)        total (ms)
+.ninja parse            843     693.6           584.7
+canonicalize str        138729  0.0             0.4
+canonicalize path       187273  0.0             0.1
+lookup node             187273  0.0             0.3
+.ninja_log load         1       23197.0         23.2
+node stat               1879    110.1           206.9
+depfile load            635     78.3            49.7
+
+path->node hash load 0.15 (39437 entries / 262144 buckets)
+```
