@@ -15,6 +15,7 @@ https://groups.google.com/d/topic/ninja-build/txeosqGMc6k/discussion
 ### Rebuilding dependents of shared objects only when API changes
 
 http://neugierig.org/software/blog/2012/07/gyp-toc.html
+https://groups.google.com/d/msg/ninja-build/5wiHeCgFs58/USPwhlRM_04J
 
 ### Windows .lib files
 
