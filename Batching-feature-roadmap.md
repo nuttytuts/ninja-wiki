@@ -89,12 +89,45 @@ rule cc: cc $ins --outputs $outs
 
 E.g. do we need a way to limit how many files are batched together?  Maybe the answer to the output directory batching question is that we can only batch together files that share an output directory -- does this mean we then need an $output_dir variable usable in the rule's command?  (E.g. "command = mycompiler --output-dir=$output_dir $in", where $in can be multiple files.)
 
-**Possibility:** 
+**Possibility:** if we let the compiler determine itself the name of outputs, then there is a problem with output directories indeed. If we have the possibility to provide both a list of inputs and corresponding outputs to the compiler, the problem is solved out-of-the-box. Then the batching can be done depending on the parallelism, for example with `-j4` we may want to divide the compilation of 100 files to 4 batches of 25 files each.
 
 ### How are failures handled?
 
 If the batched compile exits with a failure status, does that mean all of the outputs passed to the command should be considered bad, or must we parse the output in some way to determine failure on a per-output basis?
 
+**Possibility:** I believe parsing the output would be too fragile, it basically depends on the compiler stderr output format, and will break if this output changes.
+
+But the thing is: batching is the *most useful* for full-builds. In a full build, it is not supposed to have compile errors, except in the case of environment mis-configuration. Plus, when getting batching errors, then we care a *bit* less about compile time.
+
+So, the solution could be:
+
+* considering all the batch outputs as dirty;
+* divide the batch into 2 or more pieces;
+* re-run each batches;
+* re-divide in case of errors, etc.
+
+Or, it could just explode the batch and run each file separately to ensure we directly find the errored files.
+
 ### How are dependencies extracted?
 
 It's easy enough to say "just write out multiple .d files", but we hit the same output directory problem, and the whole reason for patching is for cl.exe which doesn't write .d files.  In cl's /showIncludes case, it lists each file it's compiling followed by that file's list of includes, so perhaps that format should just be required by Ninja's parser.
+
+**Possibility:** yes that's a problem too. Things are simple in case the compiler supports it, of course:
+
+```ninja
+rule cc
+  command = cc $in -o $out --dep-file $out.d
+  batch_command = cc --multiple-with-deps $batch{$in $out $out.d}
+  depfile = $out.d
+```
+
+Or even:
+
+```ninja
+rule cc
+  command = cc $in -o $out --dep-file $out.d
+  batch_command = cc --multiple $batch{$in $out} --dep-file $batch_name.d
+  batch_depfile = $batch_name.d
+```
+
+
