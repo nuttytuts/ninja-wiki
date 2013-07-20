@@ -1,5 +1,7 @@
 This page is created to discuss the batching possibilities for Ninja. See the [discussion that started the idea](https://groups.google.com/d/msg/ninja-build/kLq69BGRec8/Yb2MaiRMwEUJ).
 
+[[_TOC_]]
+
 ## What is batching?
 
 ### Basic case
