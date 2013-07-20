@@ -54,7 +54,7 @@ Then:
 * the non-optimal full build will take `2*(1+2+2)+2`: 12 seconds;
 * the optimal full build will take `1+2+2*2+2`: 9 seconds.
 
-Now, replace the two files by a complex, real-world project build process and you get the idea. Note that the starting time of a compiler process is not negligible at all in the Node.js world, for instance, because it recompile the compiler JS code itself at each call... Eg. with Stylus, CoffeeScript, etc.
+Now, replace the two files by a complex, real-world project build process and you get the idea. **Important note:** 1 second may seems really a lot to get started, but in the Node.js world, for instance, it's actually the case because Google V8 recompiles the compiler's JS code itself at each call... Eg. with Stylus, CoffeeScript, etc. It's potentially the same for any scripted compilers: SASS in Ruby, Python, etc.
 
 ## So, what can we do?
 
