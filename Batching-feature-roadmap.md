@@ -7,8 +7,10 @@ This page is created to discuss the batching possibilities for Ninja. See the [d
 Let's imagine the following Ninja project, given an hypothetic compiler `cc` and a linker `ld`:
 
 ```ninja
-rule cc: cc $in -o $out
-rule link: ld $in -o $out
+rule cc
+  command = cc $in -o $out
+rule link
+  command = ld $in -o $out
 build foo.o: cc foo.c | baz.h
 build bar.o: cc bar.c | baz.h
 build a.out: foo.o bar.o
@@ -52,8 +54,47 @@ Then:
 * the non-optimal full build will take `2*(1+2+2)+2`: 12 seconds;
 * the optimal full build will take `1+2+2*2+2`: 9 seconds.
 
-Now, replace the two files by a complex, real-world project build process and you get the idea.
+Now, replace the two files by a complex, real-world project build process and you get the idea. Note that the starting time of a compiler process is not negligible at all in the Node.js world, for instance, because it recompile the compiler JS code itself at each call... Eg. with Stylus, CoffeeScript, etc.
 
 ## So, what can we do?
 
+Implement batching in Ninja! There are, obviously, a few blocking issues.
 
+### How are output directories handled?
+
+E.g. if two available commands are "build dir1/foo.o: cc foo.cc" and "build some/other/dir/bar.o: bar.cc", how can Ninja know how to assemble the command line such that the batch runner can run them correctly?
+
+**Possibility:** if the compiler have a special syntax for it, it could just be `cc --multiple foo.cc dir1/foo.o  bar.cc some/other/dir/bar.o`. The biggest problem here is to have a compiler supporting multiple specific *output files* (in addition to multiple *inputs*). Then the syntax in the Ninja could be something like:
+
+```ninja
+rule cc
+  command = cc --multiple $batch{$in $out}
+```
+
+More complete:
+
+```ninja
+rule cc
+  command = cc $in -o $out
+  batch_command = cc --multiple $batch{$in $out}
+```
+
+Another idea:
+
+```ninja
+rule cc: cc $ins --outputs $outs
+```
+
+### How many knobs to control batching does Ninja need to provide? 
+
+E.g. do we need a way to limit how many files are batched together?  Maybe the answer to the output directory batching question is that we can only batch together files that share an output directory -- does this mean we then need an $output_dir variable usable in the rule's command?  (E.g. "command = mycompiler --output-dir=$output_dir $in", where $in can be multiple files.)
+
+**Possibility:** 
+
+### How are failures handled?
+
+If the batched compile exits with a failure status, does that mean all of the outputs passed to the command should be considered bad, or must we parse the output in some way to determine failure on a per-output basis?
+
+### How are dependencies extracted?
+
+It's easy enough to say "just write out multiple .d files", but we hit the same output directory problem, and the whole reason for patching is for cl.exe which doesn't write .d files.  In cl's /showIncludes case, it lists each file it's compiling followed by that file's list of includes, so perhaps that format should just be required by Ninja's parser.
