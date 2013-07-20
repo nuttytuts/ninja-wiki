@@ -130,4 +130,23 @@ rule cc
   batch_depfile = $batch_name.d
 ```
 
+## Existing compilers we'd like to support
 
+### MSVC `cl.exe`
+
+Controlling output path: "It turns out the /Fo option actually works [to specify an output directory], but the directory you specify must end with a backslash."
+http://stackoverflow.com/questions/7706490/visual-c-command-line-compiler-cl-exe-redirect-obj-files
+
+Dependencies: the `/showIncludes` flag writes output like:
+```
+input1.cc
+Note: including path: ...bar.h
+input2.cc
+Note: including path: ...baz.h
+```
+
+### CoffeeScript (node.js)
+
+Output: The `-o flag` can specify an output directory.
+
+Dependencies: each file builds independently, there's no need.
