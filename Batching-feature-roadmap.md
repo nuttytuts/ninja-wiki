@@ -27,7 +27,7 @@ $ ninja
 
 This is not optimal because:
 
-* the compiler can't use it hypothetic internal cache to precompile headers (both `.c` files include the giant and complicated `baz.h`);
+* the compiler can't use it *hypothetic* internal cache for headers (both `.c` files include the giant and complicated `baz.h`; note that it's not really header precompilation, it's more purely-internal header caching, and is dependent on compiler implementations);
 * `cc` is loaded twice in memory, causing a process startup overhead.
 
 ### Optimized case
