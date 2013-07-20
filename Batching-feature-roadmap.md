@@ -145,6 +145,20 @@ input2.cc
 Note: including path: ...baz.h
 ```
 
+### GCC
+
+Output: there is apparently no way to specify output directory.
+http://stackoverflow.com/questions/1814270/gcc-g-option-to-place-all-object-files-into-separate-directory
+
+One solution is to change the current directory before building:
+```sh
+$ cd obj/
+$ gcc -c ../src/foo.c ../src/bar.c
+$ cd ../src
+```
+
+Ugly, but not painful if Ninja takes care of it behind the scenes.
+
 ### CoffeeScript (node.js)
 
 Output: The `-o flag` can specify an output directory.
