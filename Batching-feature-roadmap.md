@@ -1,4 +1,4 @@
-This page is created to discuss the batching possibilities for Ninja.
+This page is created to discuss the batching possibilities for Ninja. See the [discussion that started the idea](https://groups.google.com/d/msg/ninja-build/kLq69BGRec8/Yb2MaiRMwEUJ).
 
 ## What is batching?
 
@@ -55,6 +55,5 @@ Then:
 Now, replace the two files by a complex, real-world project build process and you get the idea.
 
 ## So, what can we do?
-
 
 
