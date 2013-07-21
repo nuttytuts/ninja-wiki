@@ -164,3 +164,11 @@ Ugly, but not painful if Ninja takes care of it behind the scenes.
 Output: The `-o flag` can specify an output directory.
 
 Dependencies: each file builds independently, there's no need.
+
+### Snockets
+
+https://npmjs.org/package/snockets-cli
+
+Output: The `-o` flag specify a single output, but support for multiple inputs/outputs can be added easily.
+
+Dependencies: The `--dep-file` generates a Makefile-compatible dependency file. But again, support for multiple inputs have to be added.
