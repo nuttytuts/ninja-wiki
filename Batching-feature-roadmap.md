@@ -165,10 +165,18 @@ Output: The `-o flag` can specify an output directory.
 
 Dependencies: each file builds independently, there's no need.
 
-### Snockets
+### Snockets (node.js)
 
 https://npmjs.org/package/snockets-cli
 
 Output: The `-o` flag specify a single output, but support for multiple inputs/outputs can be added easily.
 
 Dependencies: The `--dep-file` generates a Makefile-compatible dependency file. But again, support for multiple inputs have to be added.
+
+### Stylus (node.js)
+
+https://github.com/learnboost/stylus
+
+Output: The `-o` flag specify an output directory.
+
+Dependencies: the official script does not provide a way to extract dependencies, but this easy enough to make a CLI script doing it.
