@@ -1,4 +1,4 @@
-This page lists generators that can produce ninja files. Some of them are generally usable, some are one-off scripts specific to a given project.
+This page lists generators that can produce ninja files. Some of them are generally usable; some are one-off scripts specific to a given project.
 
 [CMake](http://www.cmake.org/) is a general meta-build system. CMake runs on most platforms, and can generate project files in many formats, including ninja (use `-GNinja`).
 
@@ -11,3 +11,5 @@ This page lists generators that can produce ninja files. Some of them are genera
 [TextMate 2's gen_build script](https://github.com/textmate/textmate/blob/master/bin/gen_build) is what generatest ninja files for TextMate's build. It's not meant to be generally useful.
 
 [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
+
+[Meson](https://jpakkane.github.io/meson/) is another general-purpose build system that generates Ninja scripts; to be precise, it uses Ninja as its default build generator.
