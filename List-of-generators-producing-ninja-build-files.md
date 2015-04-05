@@ -6,4 +6,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 [Blueprint](https://github.com/google/blueprint/) takes build descriptions written in Go and generates ninja files from them.
 
-[GN](https://code.google.com/p/chromium/wiki/gn) generates ninja files.
+[GN](https://code.google.com/p/chromium/wiki/gn) generates ninja files. It's also mean to be generally usable.
+
+[TextMate 2's gen_build script](https://github.com/textmate/textmate/blob/master/bin/gen_build) is what generatest ninja files for TextMate's build. It's not meant to be generally useful.
+
+[Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
