@@ -23,3 +23,5 @@ This page lists generators that can produce ninja files. Some of them are genera
 - [Creator](https://github.com/NiklasRosenstein/creator) gives you the best of three worlds: The freedom of GNU Make, the power of Python and the performance of ninja.
 
 - [bfg9000](https://github.com/jimporter/bfg9000) is a cross-platform build configuration system with an emphasis on making it easy to define how to build your software. It converts a Python-based build script into the appropriate files for your underlying build system of choice (Make, Ninja, or MSBuild).
+
+- [kati](https://github.com/google/kati) is an experimental GNU make clone that converts Makefiles to ninja build files. The main goal of this tool is to speed-up incremental build of Android.
