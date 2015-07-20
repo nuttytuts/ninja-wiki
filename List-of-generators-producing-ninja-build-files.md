@@ -6,6 +6,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
 
+- [IRPF90](https://github.com/scemama/irpf90) is a Fortran90 preprocessor written in Python for programming using the Implicit Reference to Parameters (IRP) method. It simplifies the development of large fortran codes in the field of scientific high performance computing. It's not meant to be generally useful.
+
 ## General Purpose
 
 - [Ninja's ninja_syntax.py script](https://github.com/martine/ninja/blob/master/misc/ninja_syntax.py) (also available from PyPI as [ninja-syntax](https://pypi.python.org/pypi/ninja_syntax) package) is a low-level Python module that generates ninja files. This script is meant to be generally usable.
