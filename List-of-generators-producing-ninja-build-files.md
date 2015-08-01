@@ -20,7 +20,7 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [Blueprint](https://github.com/google/blueprint/) takes build descriptions written in Go and generates ninja files from them.
 
-- [Meson](https://jpakkane.github.io/meson/) is another general-purpose build system that generates Ninja scripts; to be precise, it uses Ninja as its default build generator.
+- [Meson](http://mesonbuild.com/) is another general-purpose build system that generates Ninja scripts; to be precise, it uses Ninja as its default build generator.
 
 - [Creator](https://github.com/NiklasRosenstein/creator) gives you the best of three worlds: The freedom of GNU Make, the power of Python and the performance of ninja.
 
