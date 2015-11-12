@@ -2,18 +2,22 @@
 
 Official releases of binaries for Linux, Mac, and Windows can be found on [the releases page](https://github.com/ninja-build/ninja/releases).
 
-## Linux
+## Package managers
+
+*Warning*: depending on the source, the binary releases from package managers may be out of date.
+
+### Linux
 
 * Arch: `pacman -S ninja`
 * Debian/Ubuntu: `apt-get install ninja-build`
 * Fedora: `yum install ninja-build`
 * Gentoo: `emerge dev-util/ninja`
 
-## Mac
+### Mac
 
 * HomeBrew: `brew install ninja`
 * MacPorts: `port install ninja`
 
-## FreeBSD
+### FreeBSD
 
 * `pkg install ninja`
