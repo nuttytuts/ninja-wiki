@@ -1,13 +1,5 @@
 This page lists generators that can produce ninja files. Some of them are generally usable; some are one-off scripts specific to a given project.
 
-## One-offs
-
-- [TextMate 2's gen_build script](https://github.com/textmate/textmate/blob/master/bin/gen_build) is what generatest ninja files for TextMate's build. It's not meant to be generally useful.
-
-- [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
-
-- [IRPF90](https://github.com/scemama/irpf90) is a Fortran90 preprocessor written in Python for programming using the Implicit Reference to Parameters (IRP) method. It simplifies the development of large fortran codes in the field of scientific high performance computing. It's not meant to be generally useful.
-
 ## General Purpose
 
 - [Ninja's ninja_syntax.py script](https://github.com/martine/ninja/blob/master/misc/ninja_syntax.py) (also available from PyPI as [ninja-syntax](https://pypi.python.org/pypi/ninja_syntax) package) is a low-level Python module that generates ninja files. This script is meant to be generally usable.
@@ -27,3 +19,12 @@ This page lists generators that can produce ninja files. Some of them are genera
 - [bfg9000](https://github.com/jimporter/bfg9000) is a cross-platform build configuration system with an emphasis on making it easy to define how to build your software. It converts a Python-based build script into the appropriate files for your underlying build system of choice (Make, Ninja, or MSBuild).
 
 - [kati](https://github.com/google/kati) is an experimental GNU make clone that converts Makefiles to ninja build files. The main goal of this tool is to speed up incremental builds of Android.
+
+## One-offs
+
+- [TextMate 2's gen_build script](https://github.com/textmate/textmate/blob/master/bin/gen_build) is what generatest ninja files for TextMate's build. It's not meant to be generally useful.
+
+- [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
+
+- [IRPF90](https://github.com/scemama/irpf90) is a Fortran90 preprocessor written in Python for programming using the Implicit Reference to Parameters (IRP) method. It simplifies the development of large fortran codes in the field of scientific high performance computing. It's not meant to be generally useful.
+
