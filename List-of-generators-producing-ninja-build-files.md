@@ -8,7 +8,7 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [GYP](https://code.google.com/p/gyp/) is also a general meta-build system that runs on most platforms. Among other formats, it can generate ninja manifest files as well as Visual Studio and Xcode project files that can optionally delegate to ninja for the actual build (use `-f ninja`).
 
-- [GN](https://code.google.com/p/chromium/wiki/gn) generates ninja files. It's also mean to be generally usable.
+- [GN](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md) generates ninja files. It's also mean to be generally usable.
 
 - [Blueprint](https://github.com/google/blueprint/) takes build descriptions written in Go and generates ninja files from them.
 
@@ -27,4 +27,3 @@ This page lists generators that can produce ninja files. Some of them are genera
 - [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself. This script is not meant to be generally usable.
 
 - [IRPF90](https://github.com/scemama/irpf90) is a Fortran90 preprocessor written in Python for programming using the Implicit Reference to Parameters (IRP) method. It simplifies the development of large fortran codes in the field of scientific high performance computing. It's not meant to be generally useful.
-
