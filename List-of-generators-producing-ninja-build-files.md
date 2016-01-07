@@ -18,6 +18,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [kati](https://github.com/google/kati) is a GNU make clone that converts Makefiles to ninja build files. The main goal of this tool is to speed up incremental builds of Android.
 
+- [BuildFox](https://github.com/beardsvibe/buildfox) is a minimalistic ninja generator with focus on less overhead and explicit configuration files. Plus it also generates IDE projects that use ninja as build system.
+
 ## One-offs
 
 These links are to projects that have written their own custom ninja generation logic:
