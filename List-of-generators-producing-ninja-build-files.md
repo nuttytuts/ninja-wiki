@@ -30,7 +30,7 @@ These links are to projects that have written their own custom ninja generation 
 
 - [IRPF90 has a ninja.py](https://github.com/scemama/irpf90/blob/master/src/ninja.py) seems to use a combination of Makefiles and ninja files. 
 
-- [pyrate](https://github.com/pyrate-build/pyrate) is a tool for simple projects to generate ninja files using a python based build configuration script.
+- [pyrate](https://github.com/pyrate-build/pyrate-build) is a tool for simple projects to generate ninja files using a python based build configuration script.
 
 ## Utilities
 
