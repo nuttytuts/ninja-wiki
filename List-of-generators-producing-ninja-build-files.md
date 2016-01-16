@@ -20,6 +20,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [BuildFox](https://github.com/beardsvibe/buildfox) is a minimalistic ninja generator with focus on less overhead and explicit configuration files. Plus it also generates IDE projects that use ninja as build system.
 
+- [pyrate](https://github.com/pyrate-build/pyrate-build) is a tool to generate ninja files for simple projects using a python based build configuration script
+
 ## One-offs
 
 These links are to projects that have written their own custom ninja generation logic:
@@ -29,8 +31,6 @@ These links are to projects that have written their own custom ninja generation 
 - [Ninja's configure.py script](https://github.com/martine/ninja/blob/master/configure.py) is the script that generates ninja files for building ninja itself.
 
 - [IRPF90 has a ninja.py](https://github.com/scemama/irpf90/blob/master/src/ninja.py) seems to use a combination of Makefiles and ninja files. 
-
-- [pyrate](https://github.com/pyrate-build/pyrate-build) is a tool for simple projects to generate ninja files using a python based build configuration script.
 
 ## Utilities
 
