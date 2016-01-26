@@ -10,7 +10,7 @@ Official releases of binaries for Linux, Mac, and Windows can be found on [the r
 
 * Arch: `pacman -S ninja`
 * Debian/Ubuntu: `apt-get install ninja-build`
-* Fedora: `yum install ninja-build`
+* Fedora: `dnf install ninja-build`
 * Gentoo: `emerge dev-util/ninja`
 
 ### Mac
