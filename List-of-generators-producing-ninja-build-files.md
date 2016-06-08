@@ -22,6 +22,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [pyrate](https://github.com/pyrate-build/pyrate-build) is a tool to generate ninja files for simple projects using a python based build configuration script
 
+- [GENie](https://github.com/bkaradzic/GENie#genie---project-generator-tool) - Project generator tool.
+
 ## One-offs
 
 These links are to projects that have written their own custom ninja generation logic:
