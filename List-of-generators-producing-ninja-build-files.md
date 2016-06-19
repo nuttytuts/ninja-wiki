@@ -34,6 +34,8 @@ These links are to projects that have written their own custom ninja generation 
 
 - [IRPF90 has a ninja.py](https://github.com/scemama/irpf90/blob/master/src/ninja.py) seems to use a combination of Makefiles and ninja files. 
 
+- [kninja](https://github.com/rabinv/kninja/blob/master/kninja.py) is an experimental ninja file generator for the Linux kernel's build system.
+
 ## Utilities
 
 - [Ninja's ninja_syntax.py script](https://github.com/martine/ninja/blob/master/misc/ninja_syntax.py) (also available from PyPI as [ninja-syntax](https://pypi.python.org/pypi/ninja_syntax) package) is a low-level Python module that generates ninja files.  It is just a generator of the ninja syntax, and unlike the above build tools it doesn't provide any higher-level assistance in setting up your build.
