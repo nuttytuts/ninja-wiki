@@ -12,7 +12,7 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [Meson](http://mesonbuild.com/) is another general-purpose build system that generates Ninja scripts; to be precise, it uses Ninja as its default build generator.
 
-- [Craftr](https://github.com/craftr-build/craftr) is a Python based meta build system for Ninja
+- [Craftr](https://github.com/craftr-build/craftr) &ndash; a new build system based on Python and Ninja that features modular and cross platform build definitions at the flexibility of a Python script and access to multiple levels of build automation abstraction.
 
 - [bfg9000](https://github.com/jimporter/bfg9000) is a cross-platform build configuration system with an emphasis on making it easy to define how to build your software. It converts a Python-based build script into the appropriate files for your underlying build system of choice (Make, Ninja, or MSBuild).
 
