@@ -14,7 +14,7 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [GENie](https://github.com/bkaradzic/GENie#genie---project-generator-tool) - Project generator tool.
 
-- [GN](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md) generates ninja files. It's also mean to be generally usable.
+- [GN](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md) is the current meta-build system for the Chromium project and aims to be faster than GYP (the previous system) while generating more readable, maintainable build files.
 
 - [GYP](https://code.google.com/p/gyp/) is also a general meta-build system that runs on most platforms. Among other formats, it can generate ninja manifest files as well as Visual Studio and Xcode project files that can optionally delegate to ninja for the actual build (use `-f ninja`).
 
