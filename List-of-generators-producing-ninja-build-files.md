@@ -39,3 +39,5 @@ These links are to projects that have written their own custom ninja generation 
 ## Utilities
 
 - [Ninja's ninja_syntax.py script](https://github.com/martine/ninja/blob/master/misc/ninja_syntax.py) (also available from PyPI as [ninja-syntax](https://pypi.python.org/pypi/ninja_syntax) package) is a low-level Python module that generates ninja files.  It is just a generator of the ninja syntax, and unlike the above build tools it doesn't provide any higher-level assistance in setting up your build.
+
+- [ninja-build-gen](https://www.npmjs.com/package/ninja-build-gen) is generator library for ninja build files that runs on NodeJS. 
