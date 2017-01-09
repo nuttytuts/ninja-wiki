@@ -10,7 +10,7 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [CMake](http://www.cmake.org/) is a general meta-build system. CMake runs on most platforms, and can generate project files in many formats, including ninja (use `-GNinja`).
 
-- [Craftr](https://github.com/craftr-build/craftr) is a new build system based on Python and Ninja that features modular and cross platform build definitions at the flexibility of a Python script and access to multiple levels of build automation abstraction.
+- [Craftr](https://github.com/craftr-build/craftr) is a powerful, modular Python based build system that aims for cross-platform compatibility and native support for various toolchains and libraries.
 
 - [GENie](https://github.com/bkaradzic/GENie#genie---project-generator-tool) - Project generator tool.
 
