@@ -12,6 +12,7 @@ Official releases of binaries for Linux, Mac, and Windows can be found on [the r
 * Debian/Ubuntu: `apt-get install ninja-build`
 * Fedora: `dnf install ninja-build`
 * Gentoo: `emerge dev-util/ninja`
+* Opensuse: zypper in ninja
 
 ### Mac
 
