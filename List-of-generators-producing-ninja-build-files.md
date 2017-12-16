@@ -18,6 +18,8 @@ This page lists generators that can produce ninja files. Some of them are genera
 
 - [GYP](https://code.google.com/p/gyp/) is also a general meta-build system that runs on most platforms. Among other formats, it can generate ninja manifest files as well as Visual Studio and Xcode project files that can optionally delegate to ninja for the actual build (use `-f ninja`).
 
+- [Jagen](https://github.com/bazurbat/jagen) just another build system generator tool with focus on management of projects consisting of multiple packages. It compiles declarative rules to build file for Ninja which does the actual work.
+
 - [kati](https://github.com/google/kati) is a GNU make clone that converts Makefiles to ninja build files. The main goal of this tool is to speed up incremental builds of Android.
 
 - [Meson](http://mesonbuild.com/) is another general-purpose build system that generates Ninja scripts; to be precise, it uses Ninja as its default build generator.
