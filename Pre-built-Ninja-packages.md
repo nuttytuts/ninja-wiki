@@ -22,3 +22,7 @@ Official releases of binaries for Linux, Mac, and Windows can be found on [the r
 ### FreeBSD
 
 * `pkg install ninja`
+
+### Windows
+
+* Chocolatey: `choco install ninja` ( https://chocolatey.org/packages/ninja )
