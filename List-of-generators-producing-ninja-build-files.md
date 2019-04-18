@@ -42,6 +42,8 @@ These links are to projects that have written their own custom ninja generation 
 
 - [mongo_module_ninja](https://github.com/RedBeard0531/mongo_module_ninja/) A module for MongoDB's build system to turn SCons into a ninja generator.
 
+- [BuckleScript's `bsb` build tool](http://bucklescript.github.io/) uses Ninja to compile OCaml to JavaScript.
+
 ## Utilities
 
 - [Ninja's ninja_syntax.py script](https://github.com/martine/ninja/blob/master/misc/ninja_syntax.py) (also available from PyPI as [ninja-syntax](https://pypi.python.org/pypi/ninja_syntax) package) is a low-level Python module that generates ninja files.  It is just a generator of the ninja syntax, and unlike the above build tools it doesn't provide any higher-level assistance in setting up your build.
