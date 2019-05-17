@@ -6,7 +6,7 @@ Ninja could use pseudo ttys to work around this further, but different systems h
 
 **Does Ninja support Python 3?**
 
-Using Ninja for your project is language-agnostic.  Internally Ninja uses Python 2 to build itself.  It is my belief that systems where `/usr/bin/python` is not Python 2 are broken (given that we can't go back in time and add a `/usr/bin/python2` on existing systems; see also [this discussion](https://mailman.archlinux.org/pipermail/arch-general/2011-December/023344.html)).  However, I've grudgingly accepted patches to make the code run under Python 3 when they're not horrifically ugly.
+Using Ninja for your project is language-agnostic.  Internally Ninja can use both Python 2 and 3 to build itself.
 
 **Why doesn't Ninja go memory-resident between builds to improve speed / why doesn't Ninja use disk-access monitoring to track when files change?**
 
