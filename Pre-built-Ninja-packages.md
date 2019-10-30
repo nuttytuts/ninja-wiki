@@ -27,3 +27,4 @@ Official releases of binaries for Linux, Mac, and Windows can be found on [the r
 ### Windows
 
 * Chocolatey: `choco install ninja` ( https://chocolatey.org/packages/ninja )
+* Scoop: `scoop install ninja` ( https://github.com/ScoopInstaller/Main/blob/master/bucket/ninja.json )
